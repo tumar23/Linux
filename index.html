@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universul Distribuțiilor Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Folosim un font modern din Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Antetul site-ului -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Linux<span>Explorer</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#acasa">Acasă</a></li>
+                    <li><a href="#despre">Despre Linux</a></li>
+                    <li><a href="#distributii">Distribuții</a></li>
+                    <li><a href="#comparatie">Comparație</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Secțiunea principală (Hero) -->
+    <section id="acasa" class="hero-section">
+        <div class="container hero-content">
+            <h2>Descoperă Libertatea Open Source</h2>
+            <p>
+                Sistemul de operare Linux nu este doar unul singur, ci un nucleu care stă la baza a sute de sisteme de operare, 
+                cunoscute sub numele de "distribuții". Află care este cea potrivită pentru tine.
+            </p>
+            <a href="#distributii" class="btn-primary">Explorează Distribuțiile</a>
+        </div>
+    </section>
+
+    <!-- Secțiunea Despre -->
+    <section id="despre" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ce este o distribuție Linux?</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        O distribuție Linux (sau pe scurt "distro") este un sistem de operare construit pe baza nucleului Linux (Linux kernel). 
+                        Pe lângă nucleu, o distribuție include un sistem de ferestre (cum ar fi X11 sau Wayland), un mediu desktop 
+                        (GNOME, KDE Plasma, XFCE) și o colecție de software preinstalat.
+                    </p>
+                    <p>
+                        Avantajele principale ale utilizării Linux includ:
+                    </p>
+                    <ul class="features-list">
+                        <li><strong>Securitate sporită:</strong> Arhitectura bazată pe permisiuni face ca virușii să fie extrem de rari.</li>
+                        <li><strong>Personalizare:</strong> Poți modifica absolut orice aspect al interfeței și funcționalității.</li>
+                        <li><strong>Gratuitate:</strong> Majoritatea covârșitoare a distribuțiilor sunt complet gratuite (Open Source).</li>
+                        <li><strong>Performanță:</strong> Consum redus de resurse, perfect pentru a revigora calculatoarele mai vechi.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea cu Distribuții (Aici JS va acționa) -->
+    <section id="distributii" class="distros-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cele Mai Populare Distribuții</h2>
+                <div class="underline"></div>
+                <p>Apasă pe "Află mai multe" pentru a deschide fereastra popup cu detalii (Cerința pentru scriptul JS).</p>
+            </div>
+
+            <div class="cards-grid">
+                
+                <!-- Card 1: Ubuntu -->
+                <div class="card">
+                    <div class="card-icon">🟠</div>
+                    <h3>Ubuntu</h3>
+                    <p>Cea mai cunoscută distribuție, ideală pentru începători și servere deopotrivă.</p>
+                    <button class="btn-popup open-modal" data-modal="ubuntu">Află mai multe</button>
+                    
+                    <!-- Date ascunse pentru Popup -->
+                    <div id="data-ubuntu" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Ubuntu - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Ubuntu</strong> este dezvoltat de compania Canonical și este bazat pe Debian. Este renumit pentru ușurința în utilizare și suportul hardware excelent.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Instalare extrem de simplă prin interfață grafică.</li>
+                                <li>Cea mai mare comunitate de utilizatori (găsești ușor rezolvări pe forumuri).</li>
+                                <li>Software Center intuitiv pentru instalarea aplicațiilor.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Studenților, programatorilor la început de drum și celor care fac tranziția de la Windows sau macOS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Linux Mint -->
+                <div class="card">
+                    <div class="card-icon">🟢</div>
+                    <h3>Linux Mint</h3>
+                    <p>Oferă o interfață clasică și familiară, perfectă pentru cei ce renunță la Windows.</p>
+                    <button class="btn-popup open-modal" data-modal="mint">Află mai multe</button>
+                    
+                    <div id="data-mint" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Linux Mint - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Linux Mint</strong> este bazat pe Ubuntu, dar folosește medii desktop diferite (Cinnamon, MATE, XFCE) pentru a oferi o experiență mai tradițională.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Meniul de start și bara de activități seamănă foarte mult cu Windows 7/10.</li>
+                                <li>Include codec-uri multimedia direct "din cutie".</li>
+                                <li>Foarte stabil și consumă puține resurse de sistem.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Utilizatorilor de rând, părinților, bunicilor și oricui dorește un sistem care "doar funcționează".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Arch Linux -->
+                <div class="card">
+                    <div class="card-icon">🔵</div>
+                    <h3>Arch Linux</h3>
+                    <p>O distribuție minimalistă, de tip "rolling release", pentru utilizatorii avansați.</p>
+                    <button class="btn-popup open-modal" data-modal="arch">Află mai multe</button>
+                    
+                    <div id="data-arch" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Arch Linux - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Arch Linux</strong> urmează principiul KISS (Keep It Simple, Stupid). Sistemul se construiește de la zero din linia de comandă.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Managerul de pachete Pacman, extrem de rapid.</li>
+                                <li>AUR (Arch User Repository) - găsești aproape orice program existent.</li>
+                                <li>Sistem "Rolling release" - primești mereu cele mai noi actualizări, fără a reinstala sistemul.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Programatorilor, pasionaților de tehnologie, celor care vor să înțeleagă exact cum funcționează sistemul lor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Fedora -->
+                <div class="card">
+                    <div class="card-icon">🔷</div>
+                    <h3>Fedora</h3>
+                    <p>Sistemul sponsorizat de Red Hat. Oferă tehnologii de ultimă oră și inovație.</p>
+                    <button class="btn-popup open-modal" data-modal="fedora">Află mai multe</button>
+                    
+                    <div id="data-fedora" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Fedora - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Fedora</strong> este adesea considerat un teren de testare pentru tehnologiile care vor ajunge mai târziu în Red Hat Enterprise Linux.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Integrare perfectă a mediului desktop GNOME.</li>
+                                <li>Software actualizat la zi, un echilibru între noutate și stabilitate.</li>
+                                <li>Instrumente excelente pentru dezvoltatori preinstalate.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Dezvoltatorilor de software (developerilor), studenților la informatică și creatorilor de conținut.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Debian -->
+                <div class="card">
+                    <div class="card-icon">🔴</div>
+                    <h3>Debian</h3>
+                    <p>Bunicul multor distribuții. Cunoscut pentru stabilitatea sa legendară pe servere.</p>
+                    <button class="btn-popup open-modal" data-modal="debian">Află mai multe</button>
+                    
+                    <div id="data-debian" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Debian - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Debian</strong> este unul dintre cele mai vechi sisteme de operare bazate pe kernelul Linux. Este fundația pentru Ubuntu, Mint, Kali și multe altele.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Stabilitate absolută, testat riguros.</li>
+                                <li>Suport pentru o multitudine de arhitecturi de procesoare.</li>
+                                <li>Complet gratuit și independent de corporații.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Administratorilor de sistem, pentru servere de producție, și utilizatorilor care preferă stabilitatea în detrimentul software-ului nou.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Kali Linux -->
+                <div class="card">
+                    <div class="card-icon">🐉</div>
+                    <h3>Kali Linux</h3>
+                    <p>Distribuția supremă pentru securitate cibernetică și teste de penetrare (hacking etic).</p>
+                    <button class="btn-popup open-modal" data-modal="kali">Află mai multe</button>
+                    
+                    <div id="data-kali" class="hidden-data">
+                        <div class="modal-header-content">
+                            <h3>Kali Linux - Detalii Complete</h3>
+                        </div>
+                        <div class="modal-body-content">
+                            <p><strong>Kali Linux</strong>, bazat pe Debian, este proiectat special pentru criminalistica digitală și securitatea cibernetică.</p>
+                            <h4>Puncte forte:</h4>
+                            <ul>
+                                <li>Peste 600 de instrumente de testare a securității preinstalate.</li>
+                                <li>Rulează excelent în modul "Live USB" fără a lăsa urme pe PC.</li>
+                                <li>Documentație vastă pentru învățarea securității.</li>
+                            </ul>
+                            <h4>Cui se adresează?</h4>
+                            <p>Specialiștilor în securitate, studenților la criptografie, hackerilor etici.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabel comparativ pentru a mari structura HTML -->
+    <section id="comparatie" class="table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tabel Comparativ</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="table-responsive">
+                <table class="distro-table">
+                    <thead>
+                        <tr>
+                            <th>Distribuție</th>
+                            <th>Bază / Familie</th>
+                            <th>Manager Pachete</th>
+                            <th>Dificultate</th>
+                            <th>Utilizare Principală</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ubuntu</td>
+                            <td>Debian</td>
+                            <td>APT, Snap</td>
+                            <td>Ușor</td>
+                            <td>Desktop / Servere</td>
+                        </tr>
+                        <tr>
+                            <td>Linux Mint</td>
+                            <td>Ubuntu / Debian</td>
+                            <td>APT, Flatpak</td>
+                            <td>Foarte Ușor</td>
+                            <td>Desktop / Home Use</td>
+                        </tr>
+                        <tr>
+                            <td>Arch Linux</td>
+                            <td>Independent</td>
+                            <td>Pacman</td>
+                            <td>Greu</td>
+                            <td>Entuziaști / Programare</td>
+                        </tr>
+                        <tr>
+                            <td>Fedora</td>
+                            <td>Red Hat</td>
+                            <td>DNF</td>
+                            <td>Mediu</td>
+                            <td>Dezvoltatori / Workstation</td>
+                        </tr>
+                        <tr>
+                            <td>Debian</td>
+                            <td>Independent</td>
+                            <td>APT</td>
+                            <td>Mediu / Greu</td>
+                            <td>Servere de Producție</td>
+                        </tr>
+                        <tr>
+                            <td>Kali Linux</td>
+                            <td>Debian</td>
+                            <td>APT</td>
+                            <td>Avansat</td>
+                            <td>Securitate Cibernetică</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Întrebări Frecvente (FAQ)</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Pot rula jocuri pe Linux?</h4>
+                    <p>Da! Datorită proiectului Proton dezvoltat de Valve (Steam), mii de jocuri de Windows rulează nativ pe Linux cu performanțe excelente.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Este greu să instalez o distribuție?</h4>
+                    <p>Nu. Distribuții precum Ubuntu, Mint sau Pop!_OS au programe de instalare grafice mai simple și mai rapide decât cele pentru Windows.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Am nevoie de antivirus?</h4>
+                    <p>În general, nu. Arhitectura sistemului de fișiere, gestionarea permisiunilor root și repository-urile sigure fac ca infecțiile cu malware să fie foarte rare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+           
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- STRUCTURA PENTRU FEREASTRA POPUP (MODAL)   -->
+    <!-- ========================================== -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-modal">&times;</button>
+            <div id="modal-content-container">
+                <!-- Aici JavaScript va injecta conținutul din cardul apăsat -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Conectarea scriptului JS -->
+    <script src="script.js"></script>
+</body>
+</html>
